@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Air Traffic 1.1</title>
+    <meta name="description" content="FrontEnd Test">
+    <meta name="keywords" content="HTML,SASS,JavaScript,JSON">
+    <meta name="author" content="Vladeta Trisic">
+    
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="css/uikit.min.css"/>
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/main.css"/>
+</head>
+
+<body>
+<main id="app">
+    <div class="header" uk-sticky="show-on-up: true ,animation: uk-animation-slide-top">
+        <div class="info uk-text-small .uk-flex-middle">
+            <i uk-icon="location"> </i><span id="curent-position" ></span>
+            <span class="date-time uk-float-right">Date and Time</span>
+        </div>
+        <h2 class="uk-text-center uk-text-large" uk-scroll="target: app">Flights List</h2>
+    </div>
+    <div class="uk-container">
+        
+        <ul class="flight-list uk-text-center uk-list uk-list-large  uk-list-striped">
+            <li class="list-header">
+                <div class="uk-grid uk-child-width-1-4@s">
+                    <div class="direction">Direction</div>
+                    <div class="altitude">Altitude</div>
+                    <div class="id ">Flight code</div>
+                    <div></div>
+                </div>
+            </li>
+        </ul>
+        <div id="loader" class="uk-position-center uk-text-center uk-margin-large-top">
+            <div uk-spinner></div>
+            <p>getting list...</p>
+        </div>
+    </div>
+    <a href="#" class="uk-position-bottom-center uk-margin-medium-top uk-margin-medium-bottom" uk-totop="ratio: 3" uk-scroll></a>
+
+</main>
+
+<!-- This is the modal with the default close button -->
+<div id="flight-details-modal" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <h2 class="uk-modal-title">Flight Details</h2>
+        <div class="uk-grid uk-child-width-1-3@s">
+            <div class="model"></div>
+            <div class="from-to"></div>
+            <div class="company"></div>
+        </div>
+    </div>
+</div>
+
+
+<!-- UIkit JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit-icons.min.js"></script>
+<!-- Main JS -->
+<script src="js/main.js"></script>
+</body>
+
+</html>
+

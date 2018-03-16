@@ -1,0 +1,115 @@
+$lightgray: #f9fafb
+$gray: #ecf2f6
+$middlegray: #666666
+$darkgray: #363636
+$blue: #0cace7
+$purple: #958fb1
+$green: #05c4a0
+$red: #ff4139
+html 
+  font-size: 16px
+  font-family: Lato
+  body
+    min-height: 100vh
+    background: url('../img/World_Map_Dots.png')
+    background-attachment: fixed
+    object-fit: cover
+    a
+      text-decoration: none
+    a:hover
+      text-decoration: none
+    #app 
+      position: relative
+      padding-bottom: 4rem
+      .header
+        height: 6rem
+        color: $middlegray
+        background: transparentize($purple, .5)
+        padding-bottom: 1.5rem
+        margin-bottom: 1.5rem
+        border-bottom: .0625rem solid $purple
+        transition: height 0.24s ease-in-out
+        .info
+          display: block
+          padding: .5rem
+        h2
+          font-size: 2rem
+          color: $middlegray
+          margin-top: 1rem
+          margin-bottom: 2rem
+      .header.uk-active
+        height: 4rem
+        argin-bottom: .5rem
+        background-color: $purple
+        border-bottom: .0625rem solid $middlegray
+        .info
+          display: none
+        h2
+          font-size: 1.5rem
+          margin-top: .75rem
+          margin-bottom: 1.5rem
+          cursor: pointer
+          transition: color 0.16s ease-in-out
+        h2:hover
+          color: $gray
+
+
+      ul
+        max-width: 40rem
+        margin: 0 auto 2rem
+        padding: .5rem
+        border-radius: .5rem
+        background: transparentize($purple, .5)
+        border: .0625rem solid $purple
+        
+        li
+          border-radius: 0.5rem
+          margin-bottom: 0.5rem
+          a
+            font-size: 1rem
+            color: $lightgray
+            background-color: transparentize($darkgray, .4)
+            padding: .5rem 1rem
+            border-radius: .5rem
+            border-bottom: .125rem solid transparentize($middlegray, .4)
+            transition: background 0.16s ease-in
+          a:hover
+            text-decoration: none
+            color: $darkgray
+            background: transparentize($purple, .2)
+            border-bottom: .125rem solid transparentize($lightgray, .2)
+
+        li:first-child
+          background: transparentize($gray, .2)
+          font-size: 1.25rem
+          color: $middlegray
+          // border-radius: 0.5rem 0.5rem 0.25rem 0.25rem
+          border-bottom: .125rem solid $purple
+        li.flight:nth-child(odd)
+          background: transparentize($lightgray, .4)
+          color: $middlegray
+        li.flight:nth-child(even)
+          background: transparentize($middlegray, .4)
+          color: $lightgray
+        
+
+    
+
+  
+
+
+    
+  @media screen and (min-width: 900px) 
+    font-size: 18px
+
+    
+  @media screen and (min-width: 1200px) 
+    font-size: 20px
+
+
+
+      
+        
+
+    
+    
